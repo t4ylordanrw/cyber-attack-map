@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "category": "Financial",
+    "title": "Crédit Mutuel Arkéa Bank Heist",
+    "location": "Brest, France",
+    "lat": 48.3904,
+    "lng": -4.4861,
+    "date": "2026-11-04",
+    "description": "Attackers compromised a third-party service provider and used the bank's own account to transfer approximately €100 million (estimates up to €118M / $133M), later converted to cryptocurrency. Customer funds and accounts were not affected. Contained after temporary transfer suspensions.",
+    "impact": "Significant financial loss to the bank; investigation ongoing by French authorities.",
+    "source": "Bank statements, Reuters, OCCRP"
+  },
+  {
+    "id": 2,
+    "category": "Financial",
+    "title": "JPMorgan, Visa, Mastercard Vendor Data Exposure",
+    "location": "New York, USA",
+    "lat": 40.7128,
+    "lng": -74.006,
+    "date": "2026-11-16",
+    "description": "n0n ransomware group claimed an attack on Qubole (third-party data analytics vendor). Customer data including names and emails for JPMorgan Chase, Visa, and Mastercard cardholders was leaked. No direct account drains reported.",
+    "impact": "Data exposure for phishing; financial institutions confirmed vendor-related incidents.",
+    "source": "BleepingComputer, company confirmations"
+  }
+]
