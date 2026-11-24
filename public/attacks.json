@@ -238,5 +238,101 @@
     "description": "Preliminary review of alleged dark web leak found 3,897 customer records with names, mobile numbers, dates of birth, addresses, CIF numbers and loan details. Core banking not affected.",
     "impact": "Limited customer personal and loan data exposure.",
     "source": "Regulatory filing, The Tribune"
+  },
+  {
+    "id": 21,
+    "category": "Critical Infrastructure",
+    "title": "FBI NCIC Database Intrusion",
+    "location": "Washington DC, USA",
+    "lat": 38.9072,
+    "lng": -77.0369,
+    "date": "2026-11-19",
+    "description": "The FBI is investigating an apparent breach of the National Crime Information Center, a nationwide law enforcement database of warrants, missing persons and criminal justice records. CNN and AP reported the attack took place on Thursday; the Bureau has not issued a public confirmation and the scope remains unclear.",
+    "impact": "Potential exposure of sensitive law enforcement data; scope of access or theft unconfirmed.",
+    "source": "AP, CNN, BleepingComputer, The Record"
+  },
+  {
+    "id": 22,
+    "category": "Critical Infrastructure",
+    "title": "West Virginia Legislature Cyber Incident",
+    "location": "Charleston, West Virginia, USA",
+    "lat": 38.3498,
+    "lng": -81.6326,
+    "date": "2026-11-19",
+    "description": "The West Virginia Legislature identified a cybersecurity incident affecting its IT systems on November 19, initially assessed as possible ransomware. Staff disabled affected systems and remote access; the public website was taken down. Officials said the incident appeared limited to Legislature systems.",
+    "impact": "Legislature website and some IT systems taken offline; no evidence other state agencies were affected; data theft undetermined.",
+    "source": "The Record, official statement"
+  },
+  {
+    "id": 23,
+    "category": "Critical Infrastructure",
+    "title": "Skagerak Energi Cyberattack",
+    "location": "Porsgrunn, Norway",
+    "lat": 59.1409,
+    "lng": 9.6550,
+    "date": "2026-11-18",
+    "description": "Norwegian electricity producer Skagerak Energi detected activity consistent with a cyberattack on some IT systems. Operations and electricity production were unaffected, and the company reported no indication that information was compromised. Norway's NSM later linked the incident, along with Equinor's, to exploitation of a Microsoft Azure API Management vulnerability.",
+    "impact": "IT systems targeted; operations and power production unaffected; no confirmed data theft.",
+    "source": "Company statement, The Record, BleepingComputer"
+  },
+  {
+    "id": 24,
+    "category": "Private Organisation",
+    "title": "N-able Mail Assure Cloud Server Breach",
+    "location": "Burlington, Massachusetts, USA",
+    "lat": 42.5048,
+    "lng": -71.1956,
+    "date": "2026-11-16",
+    "description": "N-able confirmed unauthorized access to one server in its Mail Assure and SpamExperts Hosted Cloud, after a November 16 disruption initially blamed on a configuration issue. Management portals and APIs were disabled worldwide across the Americas, APAC and Europe; email delivery and spam filtering continued. Access was restored on November 21.",
+    "impact": "Global email-security management outage; no evidence of customer mailbox or tenant data compromise reported.",
+    "source": "BleepingComputer, SecurityWeek, company confirmation"
+  },
+  {
+    "id": 25,
+    "category": "Private Organisation",
+    "title": "SBC Medical Group Customer Data Breach",
+    "location": "Yokohama, Japan",
+    "lat": 35.4437,
+    "lng": 139.6380,
+    "date": "2026-11-16",
+    "description": "SBC Medical Group discovered unauthorized access to databases of its Japanese subsidiary on November 16, with attackers extracting basic personal information of 1,624,000 people plus reservation, inquiry, treatment and employee records. A separate incident the same day involved administrator accounts on the Tribeau booking platform used by clinics.",
+    "impact": "Personal data of more than 1.6 million customers exposed, plus employee and some treatment records; 14 expired credit cards also affected.",
+    "source": "SEC filing, BleepingComputer, SecurityWeek"
+  },
+  {
+    "id": 26,
+    "category": "Private Organisation",
+    "title": "Optimizely Web Experimentation Supply-Chain Attack",
+    "location": "New York, USA",
+    "lat": 40.7128,
+    "lng": -74.0060,
+    "date": "2026-11-16",
+    "description": "Attackers exploited a vulnerability in Optimizely's Experimentation account signup flow to inject malicious JavaScript into customer projects. The malware loaded on sites of 178 organizations, including CNN, Fox News, BBC, Zoom, Salesforce and GitLab, and was designed to skim payment cards, hijack cryptocurrency addresses and deliver iOS exploits.",
+    "impact": "Malware delivered via trusted scripts on hundreds of major websites, exposing visitors to card theft, crypto theft and iOS exploits.",
+    "source": "BleepingComputer, company confirmation"
+  },
+  {
+    "id": 27,
+    "category": "Critical Infrastructure",
+    "title": "USDA Farm Payment Systems Cyber Incident",
+    "location": "Washington DC, USA",
+    "lat": 38.9072,
+    "lng": -77.0369,
+    "date": "2026-11-16",
+    "description": "USDA's Cybersecurity and Privacy Operations Center uncovered a security incident, prompting database password resets and outages of applications used for farmer payments, loans and crop insurance. NBC News later reported, citing sources, that the agency told employees hackers had accessed the farmer-payment system.",
+    "impact": "Multi-day outages of farm payment and aid systems; whether data was stolen remains unclear.",
+    "source": "Nextgov, NBC News"
+  },
+  {
+    "id": 28,
+    "category": "Financial",
+    "title": "Rakuten Securities Customer Data Leak",
+    "location": "Tokyo, Japan",
+    "lat": 35.6762,
+    "lng": 139.6503,
+    "date": "2026-11-11",
+    "description": "Rakuten Securities said unauthorized access on November 11 via a test-environment system may have exposed login IDs and account codes for up to 11.25 million accounts, and names, contact details, bank account numbers, income and asset information for up to 4.47 million accounts. Passwords and PINs were not compromised, and no unauthorized trades were identified.",
+    "impact": "Possible leak of login identifiers for 11.25 million accounts and sensitive personal and financial data for 4.47 million accounts.",
+    "source": "Company disclosure, NHK, The Japan Times"
   }
 ]
