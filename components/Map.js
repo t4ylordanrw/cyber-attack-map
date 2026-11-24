@@ -8,6 +8,9 @@ const categoryColors = {
   Financial: '#ef4444',
   'Private Organisation': '#3b82f6',
   'Critical Infrastructure': '#f97316',
+  Healthcare: '#10b981',
+  'Government / Public Sector': '#a855f7',
+  'Technology / Supply Chain': '#06b6d4',
 };
 
 function createIcon(color, isRecent) {

@@ -9,6 +9,9 @@ const categories = {
   Financial: { color: '#ef4444', label: 'Financial' },
   'Private Organisation': { color: '#3b82f6', label: 'Private Organisation' },
   'Critical Infrastructure': { color: '#f97316', label: 'Critical Infrastructure' },
+  Healthcare: { color: '#10b981', label: 'Healthcare' },
+  'Government / Public Sector': { color: '#a855f7', label: 'Government / Public Sector' },
+  'Technology / Supply Chain': { color: '#06b6d4', label: 'Technology / Supply Chain' },
 };
 
 export default function Home() {
@@ -78,7 +81,6 @@ export default function Home() {
             value={dateFrom}
             onChange={e => setDateFrom(e.target.value)}
             className="px-2 py-1.5 rounded bg-gray-700 border border-gray-600 text-sm"
-            title="From date"
           />
           <span className="text-gray-400 text-sm">to</span>
           <input
@@ -86,97 +88,63 @@ export default function Home() {
             value={dateTo}
             onChange={e => setDateTo(e.target.value)}
             className="px-2 py-1.5 rounded bg-gray-700 border border-gray-600 text-sm"
-            title="To date"
           />
-          {(search || dateFrom || dateTo || selectedCategory !== 'All') && (
-            <button
-              onClick={() => {
-                setSearch('');
-                setDateFrom('');
-                setDateTo('');
-                setSelectedCategory('All');
-              }}
-              className="text-sm text-blue-400 hover:underline"
-            >
-              Clear filters
-            </button>
-          )}
         </div>
 
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedCategory('All')}
-            className={`px-3 py-1 rounded text-sm ${selectedCategory === 'All' ? 'bg-white text-black' : 'bg-gray-700'}`}
+            className={`px-3 py-1 rounded text-sm ${selectedCategory === 'All' ? 'bg-blue-600' : 'bg-gray-700'}`}
           >
-            All ({attacks.length})
+            All
           </button>
           {Object.entries(categories).map(([key, val]) => (
             <button
               key={key}
               onClick={() => setSelectedCategory(key)}
               className={`px-3 py-1 rounded text-sm flex items-center gap-1 ${selectedCategory === key ? 'ring-2 ring-white' : ''}`}
-              style={{ backgroundColor: val.color + '40' }}
+              style={{ backgroundColor: val.color + '30', borderColor: val.color, borderWidth: 1 }}
             >
-              <span className="w-3 h-3 rounded-full" style={{ backgroundColor: val.color }} />
-              {val.label} ({attacks.filter(a => a.category === key).length})
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: val.color }}></span>
+              {val.label}
             </button>
           ))}
         </div>
       </header>
 
       <div className="flex flex-1 overflow-hidden">
-        <aside className="w-80 bg-gray-800 overflow-y-auto border-r border-gray-700 p-4 hidden md:block">
-          <h2 className="font-semibold mb-3">
-            Incidents ({sorted.length})
-          </h2>
+        <div className="flex-1 relative">
           {loading ? (
-            <p className="text-gray-400 text-sm">Loading...</p>
-          ) : sorted.length === 0 ? (
-            <p className="text-gray-400 text-sm">No incidents match your filters.</p>
-          ) : (
-            <div className="space-y-2">
-              {sorted.map(attack => (
-                <div
-                  key={attack.id}
-                  onClick={() => setSelectedAttack(attack)}
-                  className="p-3 bg-gray-700 rounded cursor-pointer hover:bg-gray-600 text-sm"
-                >
-                  <div className="flex items-center gap-2 mb-1">
-                    <span
-                      className="w-2 h-2 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: categories[attack.category]?.color }}
-                    />
-                    <span className="font-medium line-clamp-2">{attack.title}</span>
-                  </div>
-                  <div className="text-gray-400 text-xs">{attack.location} • {attack.date}</div>
-                </div>
-              ))}
-            </div>
-          )}
-        </aside>
-
-        <main className="flex-1 relative">
-          {loading ? (
-            <div className="flex items-center justify-center h-full text-gray-400">Loading map...</div>
+            <div className="absolute inset-0 flex items-center justify-center">Loading map...</div>
           ) : (
             <MapComponent
-              attacks={filteredAttacks}
+              attacks={sorted}
               selectedAttack={selectedAttack}
               onSelect={setSelectedAttack}
             />
           )}
-        </main>
-      </div>
-
-      {selectedAttack && (
-        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-gray-800 p-4 border-t border-gray-700 max-h-56 overflow-y-auto z-10">
-          <h3 className="font-bold">{selectedAttack.title}</h3>
-          <p className="text-sm text-gray-300 mt-1">{selectedAttack.description}</p>
-          <p className="text-xs text-gray-400 mt-2">Impact: {selectedAttack.impact}</p>
-          <p className="text-xs text-gray-500 mt-1">Source: {selectedAttack.source}</p>
-          <button onClick={() => setSelectedAttack(null)} className="mt-2 text-sm text-blue-400">Close</button>
         </div>
-      )}
+
+        <aside className="w-96 bg-gray-800 border-l border-gray-700 overflow-y-auto p-4">
+          <h2 className="text-lg font-semibold mb-3">Incidents ({sorted.length})</h2>
+          {sorted.length === 0 && <p className="text-gray-400 text-sm">No incidents match filters.</p>}
+          {sorted.map(attack => (
+            <div
+              key={attack.id}
+              onClick={() => setSelectedAttack(attack)}
+              className={`mb-3 p-3 rounded cursor-pointer border ${selectedAttack?.id === attack.id ? 'border-blue-500 bg-gray-700' : 'border-gray-700 bg-gray-750 hover:bg-gray-700'}`}
+            >
+              <div className="flex items-start justify-between">
+                <strong className="text-sm">{attack.title}</strong>
+                <span className="text-xs px-1.5 py-0.5 rounded" style={{ backgroundColor: categories[attack.category]?.color + '40' }}>
+                  {attack.category}
+                </span>
+              </div>
+              <p className="text-xs text-gray-400 mt-1">{attack.location} • {attack.date}</p>
+            </div>
+          ))}
+        </aside>
+      </div>
     </div>
   );
 }
