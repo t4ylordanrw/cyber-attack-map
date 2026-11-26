@@ -1,5 +1,65 @@
 [
   {
+    "id": 73,
+    "category": "Private Organisation",
+    "title": "Flight Centre Accommodation Booking System Breach",
+    "location": "Brisbane, Australia",
+    "lat": -27.4698,
+    "lng": 153.0251,
+    "date": "2026-11-26",
+    "description": "Flight Centre told the ASX that the third-party accommodation booking system used by Flight Centre, Travel Associates, Cruiseabout and some independent agents was hit by 'unusual' cyber activity by unknown persons.",
+    "impact": "A 'significant number' of customer records may have been accessed, mostly names with basic travel info; a small share include limited passport details, emails, phone numbers, birth dates or health/mobility info. No credit card or payment data.",
+    "source": "Sydney Morning Herald — https://www.smh.com.au/business/companies/flight-centre-hit-by-cyber-incident-affecting-significant-number-of-customers-20261126-p61hmn.html"
+  },
+  {
+    "id": 74,
+    "category": "Financial",
+    "title": "US Treasury FinCEN Systems Intrusion",
+    "location": "Washington, D.C., USA",
+    "lat": 38.8951,
+    "lng": -77.0364,
+    "date": "2026-11-25",
+    "description": "The Treasury's Financial Crimes Enforcement Network said a cybersecurity incident resulted in unauthorised access to a limited subset of its systems and took some systems offline. FBI and CISA are investigating.",
+    "impact": "Some BSA E-Filing services temporarily unavailable and filing deadlines extended; no evidence so far of a breach of the Bank Secrecy Act or beneficial ownership databases.",
+    "source": "The Record — https://therecord.media/treasury-fincen-takes-systems-offline-after-cyber-incident"
+  },
+  {
+    "id": 75,
+    "category": "Technology / Supply Chain",
+    "title": "1Password Employee GitHub Account Breach",
+    "location": "Toronto, Canada",
+    "lat": 43.6532,
+    "lng": -79.3832,
+    "date": "2026-11-25",
+    "description": "An employee's corporate GitHub account was hacked and used to access private source code and inject malicious code into backend services that downloaded customer account records; investigation began 19 November.",
+    "impact": "Customer names, emails, account IDs, timestamps, public keys, SRP parameters and invitation/recovery tokens stolen, plus internal source code and CI/CD access. Password vaults and encryption keys not compromised.",
+    "source": "BleepingComputer — https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/"
+  },
+  {
+    "id": 76,
+    "category": "Private Organisation",
+    "title": "FIFA Data Theft and Extortion Attempt",
+    "location": "Zurich, Switzerland",
+    "lat": 47.3769,
+    "lng": 8.5417,
+    "date": "2026-11-25",
+    "description": "FIFA confirmed hackers breached its systems and gained unauthorised access to a limited set of personal and business information. The Handsome Boy Hacking Club group claimed to have stolen over 12 GB and published it after a failed extortion attempt.",
+    "impact": "Limited personal and business information stolen and published; law enforcement involved.",
+    "source": "The Record — https://therecord.media/fifa-data-breach-limited"
+  },
+  {
+    "id": 77,
+    "category": "Private Organisation",
+    "title": "McDonald's Japan App Database Breach",
+    "location": "Tokyo, Japan",
+    "lat": 35.6895,
+    "lng": 139.6917,
+    "date": "2026-11-24",
+    "description": "McDonald's Japan disclosed that threat actors accessed the database behind its official smartphone app.",
+    "impact": "Purchase history, IP addresses, mobile device location data and customer management IDs exposed; no names, emails, phone numbers, addresses or card data. Number affected not disclosed.",
+    "source": "BleepingComputer — https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/"
+  },
+  {
     "id": 62,
     "category": "Government / Public Sector",
     "title": "Flemish Municipalities Recycling-Centre Server Breach",
